@@ -19,6 +19,8 @@ Function Invoke-MSSQLBrute {
     Hosts array
 .OUTPUTS
     Array of objects with proporties: Host, User, Password, ServerVersion
+.NOTES
+    Author: Pawel Maziarz <pawel.maziarz@immunity-systems.com>
 .EXAMPLE
     Invoke-MSSQLBrute -Hosts 172.16.0.1 -Users sa,sasage -Passwords "","password","sa"
 .EXAMPLE
@@ -81,7 +83,7 @@ https://blog.aptmasterclass.com/
     }
 
     End {
-        Write-Verbose "[*] Tried hosts: $($stats.hostcount), login attempts: $($stats.found), successful: $($stats.tries)"
+        Write-Verbose "[*] Tried hosts: $($stats.hostcount), login attempts: $($stats.tries), successful: $($stats.found)"
         $Result
     }
 
