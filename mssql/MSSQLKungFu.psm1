@@ -38,7 +38,7 @@ https://blog.aptmasterclass.com/
         [Parameter(Position = 1)]
         [String[]]$Users = "sa",
         [Parameter(Position = 2)]
-        [String[]]$Passwords = ("", "sa", "password", "P@ssw0rd", "Comarch!2011", "reset2"),
+        [String[]]$Passwords = ("", "sa", "password", "Comarch!2011", "reset2", "sjobestia", "Wapro3000", "P@ssw0rd"),
         [Switch]$StopOnSuccess = $true,
         [Switch]$OnlyValid = $false
     )
@@ -86,7 +86,10 @@ https://blog.aptmasterclass.com/
         $Result
     }
 
-}Function Invoke-MSSQLExec {
+}
+
+
+Function Invoke-MSSQLExec {
 
     <#
 .SYNOPSIS
@@ -251,7 +254,10 @@ WHERE name = 'xp_cmdshell';
         $Result
     }
 
-}Function Invoke-MSSQLSPNSearch {
+}
+
+
+Function Invoke-MSSQLSPNSearch {
 
     <#
 .SYNOPSIS
@@ -310,7 +316,10 @@ https://blog.aptmasterclass.com/
         $Result
     }
 
-}Function Invoke-MSSQLSPNSearchBruteAndExec {
+}
+
+
+Function Invoke-MSSQLSPNSearchBruteAndExec {
 
     <#
 .SYNOPSIS
@@ -351,3 +360,5 @@ https://blog.aptmasterclass.com/
     }
 
 }
+
+
