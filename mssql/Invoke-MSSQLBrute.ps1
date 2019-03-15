@@ -38,7 +38,7 @@ https://blog.aptmasterclass.com/
         [Parameter(Position = 1)]
         [String[]]$Users = "sa",
         [Parameter(Position = 2)]
-        [String[]]$Passwords = ("", "sa", "password", "Comarch!2011", "reset2"),
+        [String[]]$Passwords = ("", "sa", "password", "Comarch!2011", "reset2", "sjobestia", "Wapro3000", "P@ssw0rd"),
         [Switch]$StopOnSuccess = $true,
         [Switch]$OnlyValid = $false
     )
@@ -64,10 +64,9 @@ https://blog.aptmasterclass.com/
                         $o | Add-Member -MemberType NoteProperty -Name Host -Value $_host
                         $o | Add-Member -MemberType NoteProperty -Name User -Value $_user
                         $o | Add-Member -MemberType NoteProperty -Name Password -Value $_pass
-                        $o | Add-Member -MemberType NoteProperty -Name ServerVersion -Value $connection.ServerVersion
                         $result += $o
                         Write-Verbose "[+] $_user@$_host - '$_pass'" 
-                        Write-Verbose "    Server version: $($connection.ServerVersion)"
+                        Write-Verbose "[+]    Server version: $($connection.ServerVersion)"
                         if ($StopOnSuccess -eq $true) {
                             break :userLoop
                         }
